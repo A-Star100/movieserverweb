@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieServer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        :root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --secondary-text-color: #bbbbbb;
+    --button-bg: #ff4500;
+    --button-hover-bg: #e03e00;
+    --link-color: white;
+}
+
+/* Light Theme */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #ffffff;
+        --text-color: #121212;
+        --secondary-text-color: #444;
+        --button-bg: #ff5722;
+        --button-hover-bg: #e64a19;
+        --link-color: #007bff;
+    }
+}
+
+h1 {
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--button-hover-bg);
+}
+
+#iframe-container {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", Arial, sans-serif;
+    transition: background-color 1s ease;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--link-color);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">MovieServer</div>
+        </header>
+        <section class="hero">
+            <h1>Easily serve your movies</h1>
+            <p>The ultimate tool to start serving movies yourself.</p>
+            <a href="#about"><button class="btn">Get Started</button></a>
+        </section>
+        <section id="about">
+<p>MovieServer is an open-source tool, built with Node.js, with a pre-built UI for serving your movies anywhere, anytime, including HLS and MPEG-DASH examples in the streaming UI (thanks to HLS.js and DASH.js), with Video.js (Video.js is really good!), and jQuery (used for context menu, too lazy to migrate), for seamless usage of advanced streaming techniques. And don't fret! If your users have disabled JavaScript, fallback options will be used.</p>
+<p>An example using an HLS stream with Video.js (forest theme) and HLS.js (plus jQuery but it's used only for the context menu, and some DOM-related stuff) is below:</p>
+</section>
+<div style="height: 30px;"></div>
+<section id="iframe">
+<div id="iframe-container">
+<iframe allowfullscreen frameborder=0 scrolling=no style="height: 70vh; width: 70vw;" src="hls-demo.html"></iframe>
+</div>
+</section>
+        <section id="more">
+            <p>Not only do you get support for HLS and MPEG-DASH out of the box, you get a <b>chat server</b> as well!, akin to Amazon's Watch Party! A side menu on the right opens and closes a chatting UI, and it includes built-in support for rooms!</p>
+            <p>For enhanced media serving alongside MovieServer, try <a href="https://jellyfin.org">Jellyfin</a> or <a href="https://www.plex.tv/media-server-downloads/">Plex</a>.</p>
+            <p>With the power of <b>MovieServer</b>, you can enhance how you stream and serve movies. Go to our <a href="https://github.com/A-Star100/MovieServer/">GitHub repository</a> to learn more!</p>
+            <p>And with the power of <b>SimpliPlay</b>, you can display your movies effortlessly with native and web-based solutions. Go to its <a href="https://simpliplay.netlify.app">website</a> to learn more!</p>
+            <small>Credit to Flaticon, Pixabay, and Freepik for icons.</small>
+        </section>
+
+        <section id="github">
+            <section id="movieserver">
+            <article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto">MovieServer</h1><a id="user-content-movieserver" class="anchor" aria-label="Permalink: MovieServer" href="#movieserver"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+                <p dir="auto">This tool creates a Node.js server to serve movies with a pre-built UI. To use this code, you will need:</p>
+                <markdown-accessiblity-table data-catalyst=""><table>
+                <thead>
+                <tr>
+                <th>Software</th>
+                <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Node.js &amp; npx</td>
+                <td><strong>Mandatory</strong></td>
+                </tr>
+                <tr>
+                <td>Jellyfin/Plex</td>
+                <td><strong>Optional</strong></td>
+                </tr>
+                </tbody>
+                </table></markdown-accessiblity-table>
+                <p dir="auto">Any Node.js libraries will be included in the node_modules folder(s)
+                Installers for the tools will be included.</p>
+                <p dir="auto">For a more comprehensive guide, take a look at <a href="https://github.com/A-Star100/MovieServer/blob/main/DOCUMENTATION.md">DOCUMENTATION.md</a>.</p>
+            </section>
+                <section id="servers">
+                <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Servers</h2><a id="user-content-servers" class="anchor" aria-label="Permalink: Servers" href="#servers"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+                <p dir="auto">There are 5 servers that will be running on your device, if you include Jellyfin.</p>
+                <p dir="auto">The main HTTPS server on port 8080 (Node.js), is a hub that is currently only designed for 2 - 4 movie buttons. You can add more if you want to. Port 8080 in this example does not include every movie.</p>
+                <p dir="auto">The server on port 4443 is an HTTP (npx) backup server that runs very fast, but it takes longer to initialize compared to the main HTTPS server, but after initialization, there isn't much difference.</p>
+                <p dir="auto">The HTTP server on port 8000 serves the directory all movies are in, and now supports <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests" rel="nofollow">HTTP range requests</a>. HTTP range requests allow the browser to request a certain part of the video, allowing you to seek forward and backward.</p>
+                <p dir="auto">The Jellyfin HTTP server on port 8096 (or a Plex HTTP server on port 32400) on the other hand supports HTTP range requests by default, in any configuration, allowing users to seek back and forth, and it uses the same concept of loading chunks of the video at a time and while one is being viewed the other downloads behind the scenes, but it isn't in a unique format, like .ts files for HLS and .m4s files for MPEG-DASH, instead they're regular MP4 files (as long as it doesn't need transcoding, then Jellyfin will use HLS by default), but it is loaded in chunks, using the JavaScript fetch API.</p>
+                <p dir="auto">And last but not least, the HTTP server running on port 3000 serves as a chat server built with plain WebSockets where users can chat in a selection of pre-made rooms.</p>
+            </section>
+                <section id="nas-specific-instructions">
+                <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">NAS-specific instructions</h2><a id="user-content-nas-specific-instructions" class="anchor" aria-label="Permalink: NAS-specific instructions" href="#nas-specific-instructions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+                <p dir="auto">NAS devices aren't as flexible as computers when it comes to installing tools. For example, on a Synology NAS using SSH, you will have to use some commands using sudo (even as admin).
+                For example, instead of</p>
+                <p dir="auto"><code>npm install DEPENDENCY</code> or <code>npm install -g DEPENDENCY</code>, you need to use sudo, otherwise your NAS will return an error of not being able to write to the directory /var/services/HOME/user, which is only granted if you use sudo, like this</p>
+                <p dir="auto"><code>sudo npm install DEPENDENCY</code> or <code>sudo npm install -g DEPENDENCY</code> (you will need your password for npm installations <em>and</em> for npx HTTP servers).</p>
+            </section>
+                </article>
+        </section>
+    </div>
+</body>
+</html>
